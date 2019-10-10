@@ -8,6 +8,7 @@ Being designed for statistics and data analysis, `R` has powerful built-in funct
 times_2 <- function(x) x * 2
 times_2(6)
 times_2(1:5)
+#creating your own functions
 ```
 
 For longer functions, it's necessary to use curly braces `{}`. We can also input multiple objects into a function, and return more complex objects, such as a vector or list.
@@ -80,7 +81,7 @@ for (i in 1:5){
                         stringsAsFactors=F)
   grades[[i]] <- student
 }
-# now we have a list...
+# now we have a list...studen
 class(grades)
 # but we can turn it into a data frame
 grades <- do.call(rbind, grades)
@@ -93,7 +94,7 @@ grades
 Depending on whether a condition is true or false, we might want to execute different chunks of code.
 
 ```{r}
-compare_xy <- function(x, y) {
+compare_xy <- function(x, y) {    #creating your own function
   if (x < y) {
     print("y is greater than x")
   } else if (x > y) {

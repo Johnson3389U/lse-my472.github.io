@@ -18,7 +18,8 @@ melt(dc, id.vars=c("CountryAbb"), value.name="idealpoint")
 Another very useful function to reshape datasets (although it's more about computing summary statistics!) is `aggregate`. For example, we can use it to compute the average value of a variable, grouped by values of a different variable. Let's see some examples
 
 ```{r}
-aggregate(idealpoint ~ CountryAbb, data=d, FUN=mean)
+aggregate(idealpoint ~ CountryAbb, data=d, 
+        =mean)
 
 aggregate(idealpoint ~ CountryAbb, data=d, FUN=median)
 
@@ -55,7 +56,7 @@ merge(students, grades, by.x="name", by.y="student")
 
 Note that by default `merge` will only return rows that are present in both dataset; but we can change that default behavior. For the non-matches, the returned value will be `NA`.
 
-```{r}
+
 merge(students, grades, by.x="name", by.y="student", all.x=TRUE)
 merge(students, grades, by.x="name", by.y="student", all.y=TRUE)
 merge(students, grades, by.x="name", by.y="student", all=TRUE)
